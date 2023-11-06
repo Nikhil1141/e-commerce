@@ -56,7 +56,7 @@ const CategoryProduct = () => {
                                         </p>
                                         <div className="card-name-price">
                                             <button
-                                                className="btn btn-info ms-1"
+                                                className="btn btn-outline-info ms-1"
                                                 onClick={() => navigate(`/product/${p.slug}`)}
                                             >
                                                 More Details
@@ -82,7 +82,7 @@ const CategoryProduct = () => {
                         {/* <div className="m-2 p-3">
             {products && products.length < total && (
               <button
-                className="btn btn-warning"
+                className="btn btn-outline-warning"
                 onClick={(e) => {
                   e.preventDefault();
                   setPage(page + 1);

@@ -4,7 +4,7 @@ import { useCart } from "../context/cart";
 import { useAuth } from "../context/auth";
 import { useNavigate } from "react-router-dom";
 import DropIn from "braintree-web-drop-in-react";
-import { AiFillWarning } from "react-icons/ai";
+// import { AiFillWarning } from "react-icons/ai";
 import axios from "axios";
 import toast from "react-hot-toast";
 import "../styles/CartStyles.css";
@@ -117,7 +117,7 @@ const CartPage = () => {
                                     </div>
                                     <div className="col-md-4 cart-remove-btn">
                                         <button
-                                            className="btn btn-danger"
+                                            className="btn btn-outline-danger"
                                             onClick={() => removeCartItem(p._id)}
                                         >
                                             Remove
@@ -183,7 +183,7 @@ const CartPage = () => {
                                         />
 
                                         <button
-                                            className="btn btn-primary"
+                                            className="btn btn-outline-primary"
                                             onClick={handlePayment}
                                             disabled={loading || !instance || !auth?.user?.address}
                                         >

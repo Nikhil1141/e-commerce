@@ -261,7 +261,7 @@ export const productListController = async (req, res) => {
 export const searchProductController = async (req, res) => {
     try {
         const { keyword } = req.params;
-        const resutls = await productModel
+        const resutls = await ProductModel
             .find({
                 $or: [
                     { name: { $regex: keyword, $options: "i" } },
@@ -284,7 +284,7 @@ export const searchProductController = async (req, res) => {
 export const realtedProductController = async (req, res) => {
     try {
         const { pid, cid } = req.params;
-        const products = await productModel
+        const products = await ProductModel
             .find({
                 category: cid,
                 _id: { $ne: pid },
