@@ -19,12 +19,14 @@ const AdminOrders = () => {
     const [auth, setAuth] = useAuth();
     const getOrders = async () => {
         try {
-            const { data } = await axios.get("/api/v1/auth/all-orders");
+            const { data } = await axios.get("/api/v1/auth/allorders");
             setOrders(data);
         } catch (error) {
             console.log(error);
         }
-    };
+    }
+
+
 
     useEffect(() => {
         if (auth?.token) getOrders();
@@ -40,6 +42,7 @@ const AdminOrders = () => {
             console.log(error);
         }
     };
+
     return (
         <Layout title={"All Orders Data"}>
             <div className="row dashboard">
@@ -115,3 +118,5 @@ const AdminOrders = () => {
 };
 
 export default React.memo(AdminOrders)
+
+
