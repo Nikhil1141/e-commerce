@@ -1,2 +1,2 @@
 # e-commerce
-#Link: https://mern-e-commerce-app.cyclic.app/
+#Link: https://mern-e-commerce.cyclic.app/
